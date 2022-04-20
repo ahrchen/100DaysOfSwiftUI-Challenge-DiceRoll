@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var dice = Dice.example
+    @State private var dices: [Dice] = Dice.exampleDices
+    @State private var sides = Dice.defaultSides
+    @State private var numDice = Dice.defaultNumDice
+    
     var body: some View {
-        Text(String(dice.value))
-            .onTapGesture {
-                dice = Dice(value: Dice.rollDice(sides: 6))
+        HStack {
+            ForEach(dices, id:\.self) { dice in
+                ZStack {
+                    Rectangle()
+                        .fill(.blue)
+                        .opacity(0.5)
+                        .frame(width: 50, height: 50)
+                    Text(dice.wrappedValue)
+                        .font(.largeTitle)
+                }
+                
             }
+        }
+        
     }
 }
 

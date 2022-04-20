@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var numSides = Dice.defaultSides
     @State private var numDice = Dices.defaultNumDice
     @State private var isShowingHistory = false
-    
+    @State private var feedback = UINotificationFeedbackGenerator()
     let maxDice = 5
     let minDice = 1
     let possibleSides = [4, 6, 8, 10, 12, 20, 100]
@@ -46,7 +46,11 @@ struct ContentView: View {
                     }
                 }
                 DiceView(dices: dices.values)
+                    .onHover { _ in
+                        feedback.prepare()
+                    }
                     .onTapGesture {
+                        feedback.notificationOccurred(.success)
                         updateDices()
                     }
                     .accessibilityAddTraits(.isButton)

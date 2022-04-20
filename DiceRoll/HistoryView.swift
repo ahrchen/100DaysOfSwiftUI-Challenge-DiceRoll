@@ -12,19 +12,7 @@ struct HistoryView: View {
     var body: some View {
         List {
             ForEach(history.reversed(), id: \.self) { dices in
-                HStack {
-                    ForEach(dices.values, id:\.self) { dice in
-                        ZStack {
-                            Rectangle()
-                                .fill(.blue)
-                                .opacity(0.5)
-                                .frame(width: 50, height: 50)
-                            Text(dice.wrappedValue)
-                                .font(.largeTitle)
-                        }
-                        
-                    }
-                }
+                DiceView(dices: dices.values)
             }
         }
     }

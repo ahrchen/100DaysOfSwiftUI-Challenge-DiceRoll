@@ -45,26 +45,12 @@ struct ContentView: View {
                         updateDices()
                     }
                 }
-                HStack {
-                    ForEach(dices.values, id:\.self) { dice in
-                        ZStack {
-                            Rectangle()
-                                .fill(.blue)
-                                .opacity(0.5)
-                                .frame(width: 50, height: 50)
-                            Text(dice.wrappedValue)
-                                .font(.largeTitle)
-                        }
-                        
+                DiceView(dices: dices.values)
+                    .onTapGesture {
+                        updateDices()
                     }
-                }
-                .onTapGesture {
-                    updateDices()
-                }
-                .accessibilityAddTraits(.isButton)
-                
+                    .accessibilityAddTraits(.isButton)
             }
-            
             .sheet(isPresented: $isShowingHistory) {
                 HistoryView(history: history)
             }

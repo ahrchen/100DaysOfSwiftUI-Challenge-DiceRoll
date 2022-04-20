@@ -20,7 +20,28 @@ struct Dices: Codable, Hashable {
     }
     
     static let defaultNumDice = 2
-    static var exampleDices: Dices = Dices(numDice: defaultNumDice, numSides: Dice.defaultSides)
+    static let exampleDices: Dices = Dices(numDice: defaultNumDice, numSides: Dice.defaultSides)
+    
+    static let savePath = FileManager.documentDirectory.appendingPathComponent("SavedDices")
+    
+    static func loadData() -> [Dices] {
+        do {
+            let data = try Data(contentsOf: Dices.savePath)
+            let history = try JSONDecoder().decode([Dices].self, from: data)
+            return history
+        } catch {
+            return []
+        }
+    }
+    
+    static func savaData(history: [Dices]) {
+        do {
+            let data = try JSONEncoder().encode(history)
+            try data.write(to: Dices.savePath, options: [.atomic, .completeFileProtection])
+        } catch {
+            print("Unable to save dices history data")
+        }
+    }
 }
 
 struct Dice: Codable, Hashable {

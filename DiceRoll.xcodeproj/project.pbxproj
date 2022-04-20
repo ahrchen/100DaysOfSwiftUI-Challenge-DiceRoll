@@ -12,6 +12,8 @@
 		EE2CAD0828108D9800AE91DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2CAD0728108D9800AE91DF /* Assets.xcassets */; };
 		EE2CAD0B28108D9800AE91DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2CAD0A28108D9800AE91DF /* Preview Assets.xcassets */; };
 		EE2CAD1228108DB300AE91DF /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2CAD1128108DB300AE91DF /* Dice.swift */; };
+		EE2CAD142810A1FA00AE91DF /* FileManager-DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2CAD132810A1FA00AE91DF /* FileManager-DocumentDirectory.swift */; };
+		EE2CAD162810AB7F00AE91DF /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2CAD152810AB7E00AE91DF /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		EE2CAD0728108D9800AE91DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE2CAD0A28108D9800AE91DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE2CAD1128108DB300AE91DF /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		EE2CAD132810A1FA00AE91DF /* FileManager-DocumentDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentDirectory.swift"; sourceTree = "<group>"; };
+		EE2CAD152810AB7E00AE91DF /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			children = (
 				EE2CAD0328108D9700AE91DF /* DiceRollApp.swift */,
 				EE2CAD0528108D9700AE91DF /* ContentView.swift */,
+				EE2CAD152810AB7E00AE91DF /* HistoryView.swift */,
 				EE2CAD1128108DB300AE91DF /* Dice.swift */,
+				EE2CAD132810A1FA00AE91DF /* FileManager-DocumentDirectory.swift */,
 				EE2CAD0728108D9800AE91DF /* Assets.xcassets */,
 				EE2CAD0928108D9800AE91DF /* Preview Content */,
 			);
@@ -142,6 +148,8 @@
 			files = (
 				EE2CAD0628108D9700AE91DF /* ContentView.swift in Sources */,
 				EE2CAD1228108DB300AE91DF /* Dice.swift in Sources */,
+				EE2CAD162810AB7F00AE91DF /* HistoryView.swift in Sources */,
+				EE2CAD142810A1FA00AE91DF /* FileManager-DocumentDirectory.swift in Sources */,
 				EE2CAD0428108D9700AE91DF /* DiceRollApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

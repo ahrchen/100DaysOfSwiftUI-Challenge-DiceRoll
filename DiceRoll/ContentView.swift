@@ -26,7 +26,16 @@ struct ContentView: View {
                 
             }
         }
-        
+        .onTapGesture {
+            rollDices()
+        }
+    }
+    
+    func rollDices() {
+        dices = []
+        for _ in 0..<numDice {
+            dices.append(Dice(sides: sides))
+        }
     }
 }
 

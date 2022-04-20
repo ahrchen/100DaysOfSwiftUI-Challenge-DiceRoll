@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var dice = Dice.example
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text(String(dice.value))
+            .onTapGesture {
+                dice = Dice(value: Dice.rollDice(sides: 6))
+            }
     }
 }
 
